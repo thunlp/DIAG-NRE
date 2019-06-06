@@ -1,0 +1,60 @@
+#! /bin/bash
+
+DIR_PREFIX=$WORK_DIR
+REL_DIR_NAME={}
+TRAIN_TYPE=train_ds
+DEV_TYPE=dev_diag
+TEST_TYPE=test_human
+LOG_NAME=log.diag.$REL_DIR_NAME
+
+arg_random_seed=0
+# data, model parameters
+arg_train_file=$DIR_PREFIX/data/$REL_DIR_NAME/$TRAIN_TYPE.csv
+arg_dev_file=$DIR_PREFIX/data/$REL_DIR_NAME/$DEV_TYPE.csv
+arg_test_file=$DIR_PREFIX/data/$REL_DIR_NAME/$TEST_TYPE.csv
+arg_vocab_freq_file=$DIR_PREFIX/data/$REL_DIR_NAME/vocab_freq.csv
+arg_model_dir=$DIR_PREFIX/model/$REL_DIR_NAME
+arg_model_store_name_prefix=att_bi_lstm.train_distant
+arg_model_resume_name=${arg_model_store_name_prefix}.best
+
+# agent parameters
+arg_policy_train_filter_prob=0.5
+arg_policy_reward_eta=1.0
+arg_policy_reward_gamma=1.0
+arg_print_reward_freq=1000
+arg_policy_max_epoch=10
+arg_policy_batch_size=5
+arg_policy_sample_cnt=5
+arg_policy_eps=0.1
+arg_policy_eps_decay=0.9
+
+# diag parameters
+arg_max_diag_anno=200
+
+# other parameters
+arg_model_type=AttBiLSTM
+arg_train_label_type=soft
+arg_print_loss_freq=1000
+arg_max_epoch=5
+arg_fix_seq_len=-1
+arg_min_word_freq=3
+arg_word_vec_size=100
+arg_pretrained_word_vectors=glove.6B.100d
+arg_pos_max_len=60
+arg_pos_vec_size=5
+arg_class_size=2
+arg_hidden_size=200
+arg_emb_dropout_p=0.3
+arg_lstm_dropout_p=0.3
+arg_last_dropout_p=0.5
+arg_train_batch_size=50
+arg_test_batch_size=500
+arg_optimizer_type=Adam
+arg_optimize_parameters=all
+arg_mask_init_weight=None
+arg_learning_rate=1e-3
+arg_momentum=0.5
+arg_weight_decay=0.0
+arg_lr_truncate=5e-2
+arg_gravity=1e-2
+arg_truncate_freq=1

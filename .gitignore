@@ -1,0 +1,17 @@
+*.tgz
+*.zip
+base_data/
+data/
+logs/
+model/
+configs/config.agent.nyt*
+configs/config.diag.nyt*
+configs/config.rel.nyt*
+configs/config.agent.uw*
+configs/config.diag.uw*
+configs/config.rel.uw*
+
+.idea/
+.vector_cache/
+*.pyc
+__pycache__/

@@ -63,7 +63,7 @@ into the current directory.
 ```bash
 unzip base_data.zip
 cd base_data
-# 'WORK_DIR' will be set properly after executing 'source ./set_env.sh'
+# 'WORK_DIR' will be set properly after executing 'source ./shell/set_env.sh'
 python prepare_data.py $WORK_DIR
 ```
 

@@ -260,8 +260,8 @@ def rule_diagnosis_and_retrain(rel_args, pos_rule_infos=None, neg_rule_infos=Non
             }
 
         # build rule hierarchy
-        # rule_file_filter_str = rule_file_name_template.split('_fprob')[0].format(model_type)
-        rule_file_filter_str = rule_file_name_template.split('_eta')[0].format(model_type, train_filter_prob)
+        # rule_file_filter_str = rule_file_name_template.split('_eta')[0].format(model_type, train_filter_prob)
+        rule_file_filter_str = rule_file_name_template.split('_fprob')[0].format(model_type)
         dump_hierarchy_file = rule_hierarchy_file_name_template.format(model_type)
         rule_hierarchy = build_rule_hierarchy_from(rule_pkl_dir,
                                                    rule_file_filter_str=rule_file_filter_str,

@@ -1,5 +1,5 @@
 # DIAG-NRE
-Source code for ACL 2019 paper "DIAG-NRE: A Neural Pattern Diagnosis Framework for Distantly Supervised Neural Relation Extraction".
+Source code for ACL 2019 paper ["DIAG-NRE: A Neural Pattern Diagnosis Framework for Distantly Supervised Neural Relation Extraction"](https://arxiv.org/pdf/1811.02166.pdf).
 
 
 ## Overview
